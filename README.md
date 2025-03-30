@@ -1,65 +1,81 @@
-# Online Book Review Server-Side Application
+# Book Review Application
 
-Welcome to the Online Book Review Server-Side Application, the final project for the IBM Course "Developing back-end apps with Node.js and Express." This application allows users to manage books, write reviews, and interact with book-related data. It utilizes MySQL as the database and Sequelize.js as the ORM (Object-Relational Mapping) tool.
+## Overview
+The **Book Review Application** is a platform that allows users to review and rate books. Users can browse books, read reviews, and contribute their own opinions.
 
-## Quick Brief
+## Features
+- User authentication and profile management
+- Add, edit, and delete book reviews
+- View ratings and reviews from other users
+- Search and filter books based on title, author, or genre
+- Responsive UI for seamless experience across devices
 
-The Online Book Review Server-Side Application provides a RESTful API for managing user accounts, books, and reviews. Users can register, log in, and create reviews for books. Books can be added, updated, and deleted. Reviews can be read, edited, and deleted. The application aims to provide a seamless experience for book enthusiasts to share their thoughts on books.
+## Technologies Used
+- **Frontend:** React.js, Tailwind CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Authentication:** JWT (JSON Web Token)
 
-## Getting Started
-
-Follow these instructions to set up and run the application:
-
+## Installation & Setup
 ### Prerequisites
+Make sure you have the following installed:
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/)
 
-1. **Node.js**: Ensure you have Node.js installed on your system. You can download it from [nodejs.org](https://nodejs.org/).
+### Clone the Repository
+```bash
+git clone https://github.com/Ayussh-Raj/Book-review-application.git
+cd Book-review-application
+```
 
-2. **MySQL**: You will need a MySQL database server installed and running. You can download MySQL from [mysql.com](https://www.mysql.com/).
-
-### Installation
-
-1. **Clone the repository**:
-
+### Backend Setup
+1. Navigate to the backend folder:
    ```bash
-   git clone <repository-url>
+   cd backend
    ```
-
-2. **Navigate to the project folder**:
-
-   ```bash
-   cd <project-folder>
-   ```
-
-3. **Install dependencies**:
-
+2. Install dependencies:
    ```bash
    npm install
    ```
-
-4. **Configure the database connection**:
-   
-   - Create a MySQL database for the application.
-   - Set your MySQL database credentials and other environment variables in the `.env` file.
-
-5. **Start the application**:
-
+3. Create a `.env` file and add the following:
+   ```
+   MONGO_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret
+   PORT=5000
+   ```
+4. Start the backend server:
    ```bash
    npm start
    ```
 
-## API Documentation
+### Frontend Setup
+1. Navigate to the frontend folder:
+   ```bash
+   cd frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the frontend server:
+   ```bash
+   npm run dev
+   ```
 
-For detailed API documentation and examples of how to use the endpoints, please take a look at the [API Documentation](https://documenter.getpostman.com/view/28416524/2s9YBxacHG).
+## Usage
+1. Register or log in to the application.
+2. Browse books and read existing reviews.
+3. Add your own book reviews and ratings.
+4. Manage your profile and reviews.
 
-## Features
+## Contributing
+Contributions are welcome! Follow these steps:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -m "Added new feature"`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a Pull Request.
 
-- **User Management**: Register, log in, and manage user accounts.
-- **Book Management**: Add, update, delete, and list books.
-- **Review Management**: Write, edit, delete, and read reviews for books.
+## License
+This project is open-source and available under the [MIT License](LICENSE).
 
-## Technologies Used
-
-- **Node.js**: JavaScript runtime environment.
-- **Express.js**: Web application framework for Node.js.
-- **MySQL**: Relational database management system.
-- **Sequelize.js**: Promise-based Node.js ORM for MySQL.
